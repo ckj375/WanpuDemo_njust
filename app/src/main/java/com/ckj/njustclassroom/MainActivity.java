@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
+import com.umeng.analytics.MobclickAgent;
+
 import cn.waps.AppConnect;
 import cn.waps.AppListener;
 
@@ -46,6 +48,18 @@ public class MainActivity extends Activity {
 //        });
 //        LinearLayout adlayout = (LinearLayout) findViewById(R.id.AdLinearLayout);
 //        AppConnect.getInstance(this).showBannerAd(this, adlayout);
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        MobclickAgent.onResume(this);
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        MobclickAgent.onPause(this);
     }
 
     @Override
