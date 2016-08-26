@@ -39,15 +39,15 @@ public class MainActivity extends Activity {
 //            }
 //        });
 //        AppConnect.getInstance(this).showPopAd(this);
-//
-//        AppConnect.getInstance(this).setBannerAdNoDataListener(new AppListener() {
-//            @Override
-//            public void onBannerNoData() {
-//                Log.e("ckjc", "Banner广告无数据");
-//            }
-//        });
-//        LinearLayout adlayout = (LinearLayout) findViewById(R.id.AdLinearLayout);
-//        AppConnect.getInstance(this).showBannerAd(this, adlayout);
+
+        AppConnect.getInstance(this).setBannerAdNoDataListener(new AppListener() {
+            @Override
+            public void onBannerNoData() {
+                Log.e("ckjc", "Banner广告无数据");
+            }
+        });
+        LinearLayout adlayout = (LinearLayout) findViewById(R.id.AdLinearLayout);
+        AppConnect.getInstance(this).showBannerAd(this, adlayout);
     }
 
     @Override
